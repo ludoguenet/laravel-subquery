@@ -9,15 +9,15 @@
 </head>
 <body>
 @foreach($authors as $author)
-  <u>{{ $author->name }} ({{ $author->best_sale }})</u>
+  <u>{{ $author->name }} ({{ $author->best_selling_name }})</u>
 
-{{--    @foreach($author->books as $book)--}}
-{{--        <div>--}}
-{{--            <div>--}}
-{{--                Nom: {{ $book->name }} ({{ $book->selling_count }})--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    @endforeach--}}
+    @foreach($author->books as $book)
+        <div>
+            <div>
+                Nom: {{ $book->name }} ({{ $book->selling_count }})
+            </div>
+        </div>
+    @endforeach
     <br />
     <br />
 @endforeach
